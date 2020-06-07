@@ -17,4 +17,6 @@ jupyter
 pytest-cov
 nbval
 pylint_flask
-
+flask_api
+flasgger
+sensible
