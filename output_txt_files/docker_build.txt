@@ -1,0 +1,229 @@
+Cloning into '.'...
+Warning: Permanently added the RSA host key for IP address '140.82.112.3' to the list of known hosts.
+Reset branch 'master'
+Your branch is up-to-date with 'origin/master'.
+Pulling cache layers for index.docker.io/nouranelkassas/demolocal:latest...
+Done!
+KernelVersion: 4.4.0-1060-aws
+Components: [{u'Version': u'19.03.8', u'Name': u'Engine', u'Details': {u'KernelVersion': u'4.4.0-1060-aws', u'Os': u'linux', u'BuildTime': u'2020-03-11T01:24:30.000000000+00:00', u'ApiVersion': u'1.40', u'MinAPIVersion': u'1.12', u'GitCommit': u'afacb8b7f0', u'Arch': u'amd64', u'Experimental': u'false', u'GoVersion': u'go1.12.17'}}, {u'Version': u'1.2.13', u'Name': u'containerd', u'Details': {u'GitCommit': u'7ad184331fa3e55e52b890ea95e65ba581ae3429'}}, {u'Version': u'1.0.0-rc10', u'Name': u'runc', u'Details': {u'GitCommit': u'dc9208a3303feef5b3839f4323d9beb36df0a9dd'}}, {u'Version': u'0.18.0', u'Name': u'docker-init', u'Details': {u'GitCommit': u'fec3683'}}]
+Arch: amd64
+BuildTime: 2020-03-11T01:24:30.000000000+00:00
+ApiVersion: 1.40
+Platform: {u'Name': u'Docker Engine - Community'}
+Version: 19.03.8
+MinAPIVersion: 1.12
+GitCommit: afacb8b7f0
+Os: linux
+GoVersion: go1.12.17
+Starting build of index.docker.io/nouranelkassas/demolocal:latest...
+Step 1/7 : FROM python:3.7.3-stretch
+---> 34a518642c76
+Step 2/7 : WORKDIR /app
+---> Using cache
+---> 6ed76ea5a0ca
+Step 3/7 : COPY . flask_app/web.py /app/
+---> f44e6647896c
+Step 4/7 : COPY . nlib /app/
+---> 81eaba339866
+Step 5/7 : RUN pip install --upgrade pip && pip install --trusted-host pypi.python.org -r requirements.txt
+---> Running in 31b86046b99f
+Collecting pip
+Downloading https://files.pythonhosted.org/packages/43/84/23ed6a1796480a6f1a2d38f2802901d078266bda38388954d01d3f2e821d/pip-20.1.1-py2.py3-none-any.whl (1.5MB)
+Installing collected packages: pip
+Found existing installation: pip 19.1.1
+Uninstalling pip-19.1.1:
+Successfully uninstalled pip-19.1.1
+Successfully installed pip-20.1.1
+Collecting Click==7.0
+Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+Collecting Flask
+Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+Collecting itsdangerous==1.1.0
+Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.10.3
+Downloading Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+Collecting MarkupSafe==1.1.1
+Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl (27 kB)
+Collecting numpy
+Downloading numpy-1.18.5-cp37-cp37m-manylinux1_x86_64.whl (20.1 MB)
+Collecting pandas==0.24.2
+Downloading pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1 MB)
+Collecting python-dateutil==2.8.0
+Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+Collecting pytz==2019.3
+Downloading pytz-2019.3-py2.py3-none-any.whl (509 kB)
+Collecting scikit-learn==0.20.2
+Downloading scikit_learn-0.20.2-cp37-cp37m-manylinux1_x86_64.whl (5.4 MB)
+Collecting scipy==1.3.1
+Downloading scipy-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (25.2 MB)
+Collecting six==1.12.0
+Downloading six-1.12.0-py2.py3-none-any.whl (10 kB)
+Collecting Werkzeug==0.16.0
+Downloading Werkzeug-0.16.0-py2.py3-none-any.whl (327 kB)
+Collecting pytest
+Downloading pytest-5.4.3-py3-none-any.whl (248 kB)
+Collecting pylint
+Downloading pylint-2.5.2-py3-none-any.whl (324 kB)
+Collecting jupyter
+Downloading jupyter-1.0.0-py2.py3-none-any.whl (2.7 kB)
+Collecting pytest-cov
+Downloading pytest_cov-2.9.0-py2.py3-none-any.whl (19 kB)
+Collecting nbval
+Downloading nbval-0.9.5-py2.py3-none-any.whl (23 kB)
+Collecting pylint_flask
+Downloading pylint-flask-0.6.tar.gz (10.0 kB)
+Collecting packaging
+Downloading packaging-20.4-py2.py3-none-any.whl (37 kB)
+Collecting more-itertools>=4.0.0
+Downloading more_itertools-8.3.0-py3-none-any.whl (44 kB)
+Collecting py>=1.5.0
+Downloading py-1.8.1-py2.py3-none-any.whl (83 kB)
+Collecting pluggy<1.0,>=0.12
+Downloading pluggy-0.13.1-py2.py3-none-any.whl (18 kB)
+Collecting importlib-metadata>=0.12; python_version < "3.8"
+Downloading importlib_metadata-1.6.1-py2.py3-none-any.whl (31 kB)
+Collecting wcwidth
+Downloading wcwidth-0.2.3-py2.py3-none-any.whl (30 kB)
+Collecting attrs>=17.4.0
+Downloading attrs-19.3.0-py2.py3-none-any.whl (39 kB)
+Collecting isort<5,>=4.2.5
+Downloading isort-4.3.21-py2.py3-none-any.whl (42 kB)
+Collecting mccabe<0.7,>=0.6
+Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting astroid<=2.5,>=2.4.0
+Downloading astroid-2.4.1-py3-none-any.whl (214 kB)
+Collecting toml>=0.7.1
+Downloading toml-0.10.1-py2.py3-none-any.whl (19 kB)
+Collecting nbconvert
+Downloading nbconvert-5.6.1-py2.py3-none-any.whl (455 kB)
+Collecting ipykernel
+Downloading ipykernel-5.3.0-py3-none-any.whl (119 kB)
+Collecting qtconsole
+Downloading qtconsole-4.7.4-py2.py3-none-any.whl (118 kB)
+Collecting jupyter-console
+Downloading jupyter_console-6.1.0-py2.py3-none-any.whl (21 kB)
+Collecting notebook
+Downloading notebook-6.0.3-py3-none-any.whl (9.7 MB)
+Collecting ipywidgets
+Downloading ipywidgets-7.5.1-py2.py3-none-any.whl (121 kB)
+Collecting coverage>=4.4
+Downloading coverage-5.1-cp37-cp37m-manylinux1_x86_64.whl (227 kB)
+Collecting nbformat
+Downloading nbformat-5.0.6-py3-none-any.whl (170 kB)
+Collecting jupyter-client
+Downloading jupyter_client-6.1.3-py3-none-any.whl (106 kB)
+Collecting pylint-plugin-utils>=0.2.1
+Downloading pylint_plugin_utils-0.6-py3-none-any.whl (10 kB)
+Collecting pyparsing>=2.0.2
+Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+Collecting zipp>=0.5
+Downloading zipp-3.1.0-py3-none-any.whl (4.9 kB)
+Collecting lazy-object-proxy==1.4.*
+Downloading lazy_object_proxy-1.4.3-cp37-cp37m-manylinux1_x86_64.whl (56 kB)
+Collecting typed-ast<1.5,>=1.4.0; implementation_name == "cpython" and python_version < "3.8"
+Downloading typed_ast-1.4.1-cp37-cp37m-manylinux1_x86_64.whl (737 kB)
+Collecting wrapt~=1.11
+Downloading wrapt-1.12.1.tar.gz (27 kB)
+Collecting defusedxml
+Downloading defusedxml-0.6.0-py2.py3-none-any.whl (23 kB)
+Collecting jupyter-core
+Downloading jupyter_core-4.6.3-py2.py3-none-any.whl (83 kB)
+Collecting traitlets>=4.2
+Downloading traitlets-4.3.3-py2.py3-none-any.whl (75 kB)
+Collecting bleach
+Downloading bleach-3.1.5-py2.py3-none-any.whl (151 kB)
+Collecting pandocfilters>=1.4.1
+Downloading pandocfilters-1.4.2.tar.gz (14 kB)
+Collecting pygments
+Downloading Pygments-2.6.1-py3-none-any.whl (914 kB)
+Collecting entrypoints>=0.2.2
+Downloading entrypoints-0.3-py2.py3-none-any.whl (11 kB)
+Collecting mistune<2,>=0.8.1
+Downloading mistune-0.8.4-py2.py3-none-any.whl (16 kB)
+Collecting testpath
+Downloading testpath-0.4.4-py2.py3-none-any.whl (163 kB)
+Collecting ipython>=5.0.0
+Downloading ipython-7.15.0-py3-none-any.whl (783 kB)
+Collecting tornado>=4.2
+Downloading tornado-6.0.4.tar.gz (496 kB)
+Collecting pyzmq>=17.1
+Downloading pyzmq-19.0.1-cp37-cp37m-manylinux1_x86_64.whl (1.1 MB)
+Collecting qtpy
+Downloading QtPy-1.9.0-py2.py3-none-any.whl (54 kB)
+Collecting ipython-genutils
+Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl (26 kB)
+Collecting prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0
+Downloading prompt_toolkit-3.0.5-py3-none-any.whl (351 kB)
+Collecting prometheus-client
+Downloading prometheus_client-0.8.0-py2.py3-none-any.whl (53 kB)
+Collecting terminado>=0.8.1
+Downloading terminado-0.8.3-py2.py3-none-any.whl (33 kB)
+Collecting Send2Trash
+Downloading Send2Trash-1.5.0-py3-none-any.whl (12 kB)
+Collecting widgetsnbextension~=3.5.0
+Downloading widgetsnbextension-3.5.1-py2.py3-none-any.whl (2.2 MB)
+Collecting jsonschema!=2.5.0,>=2.4
+Downloading jsonschema-3.2.0-py2.py3-none-any.whl (56 kB)
+Collecting decorator
+Downloading decorator-4.4.2-py2.py3-none-any.whl (9.2 kB)
+Collecting webencodings
+Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Collecting pexpect; sys_platform != "win32"
+Downloading pexpect-4.8.0-py2.py3-none-any.whl (59 kB)
+Collecting jedi>=0.10
+Downloading jedi-0.17.0-py2.py3-none-any.whl (1.1 MB)
+Collecting backcall
+Downloading backcall-0.1.0.tar.gz (9.7 kB)
+Collecting pickleshare
+Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Requirement already satisfied: setuptools>=18.5 in /usr/local/lib/python3.7/site-packages (from ipython>=5.0.0->ipykernel->jupyter->-r requirements.txt (line 16)) (41.0.1)
+Collecting ptyprocess; os_name != "nt"
+Downloading ptyprocess-0.6.0-py2.py3-none-any.whl (39 kB)
+Collecting pyrsistent>=0.14.0
+Downloading pyrsistent-0.16.0.tar.gz (108 kB)
+Collecting parso>=0.7.0
+Downloading parso-0.7.0-py2.py3-none-any.whl (100 kB)
+Building wheels for collected packages: pylint-flask, wrapt, pandocfilters, tornado, backcall, pyrsistent
+Building wheel for pylint-flask (setup.py): started
+Building wheel for pylint-flask (setup.py): finished with status 'done'
+Created wheel for pylint-flask: filename=pylint_flask-0.6-py3-none-any.whl size=9778 sha256=417d593f28d8a38ff5dfac758a1735c11cbd2185c3bd9762253cfc208d6baed3
+Stored in directory: /root/.cache/pip/wheels/ea/3f/e1/1ef643be13e0300d8bae9c6a01a7d70428822212dc8ee91fad
+Building wheel for wrapt (setup.py): started
+Building wheel for wrapt (setup.py): finished with status 'done'
+Created wheel for wrapt: filename=wrapt-1.12.1-cp37-cp37m-linux_x86_64.whl size=71572 sha256=d2ac54b94b7d5a11d6ff5db2e3c7ad879849b0eea9c50259847807c7a6dc3287
+Stored in directory: /root/.cache/pip/wheels/62/76/4c/aa25851149f3f6d9785f6c869387ad82b3fd37582fa8147ac6
+Building wheel for pandocfilters (setup.py): started
+Building wheel for pandocfilters (setup.py): finished with status 'done'
+Created wheel for pandocfilters: filename=pandocfilters-1.4.2-py3-none-any.whl size=7856 sha256=5347dc343842659c700e6ed3de0467bc4542c6883be296cf4c492497923b2f4e
+Stored in directory: /root/.cache/pip/wheels/63/99/01/9fe785b86d1e091a6b2a61e06ddb3d8eb1bc9acae5933d4740
+Building wheel for tornado (setup.py): started
+Building wheel for tornado (setup.py): finished with status 'done'
+Created wheel for tornado: filename=tornado-6.0.4-cp37-cp37m-linux_x86_64.whl size=428623 sha256=a878897dca79e6892a35497e87d61a62e54202acaf88885cbc2319dccc345fe3
+Stored in directory: /root/.cache/pip/wheels/7d/14/fa/d88fb5da77d813ea0ffca38a2ab2a052874e9e1142bad0b348
+Building wheel for backcall (setup.py): started
+Building wheel for backcall (setup.py): finished with status 'done'
+Created wheel for backcall: filename=backcall-0.1.0-py3-none-any.whl size=10413 sha256=f430de4a9faca0b4311b27a3705e49a483aded91aa5017ca11c34a14f0dad119
+Stored in directory: /root/.cache/pip/wheels/9e/56/4f/da13e448a8a5b8671b2954600d5355cf36e557c7aa5020139b
+Building wheel for pyrsistent (setup.py): started
+Building wheel for pyrsistent (setup.py): finished with status 'done'
+Created wheel for pyrsistent: filename=pyrsistent-0.16.0-cp37-cp37m-linux_x86_64.whl size=114734 sha256=1d4db7d37ea8de8e9d35d16e97e05e6b2a3dd072a814b3811f5a053fd022ef17
+Stored in directory: /root/.cache/pip/wheels/22/52/11/f0920f95c23ed7d2d0b05f2b7b2f4509e87a20cfe8ea43d987
+Successfully built pylint-flask wrapt pandocfilters tornado backcall pyrsistent
+Installing collected packages: Click, itsdangerous, MarkupSafe, Jinja2, Werkzeug, Flask, numpy, pytz, six, python-dateutil, pandas, scipy, scikit-learn, pyparsing, packaging, more-itertools, py, zipp, importlib-metadata, pluggy, wcwidth, attrs, pytest, isort, mccabe, lazy-object-proxy, typed-ast, wrapt, astroid, toml, pylint, defusedxml, decorator, ipython-genutils, traitlets, jupyter-core, webencodings, bleach, pandocfilters, pyrsistent, jsonschema, nbformat, pygments, entrypoints, mistune, testpath, nbconvert, pyzmq, tornado, jupyter-client, ptyprocess, pexpect, parso, jedi, backcall, pickleshare, prompt-toolkit, ipython, ipykernel, qtpy, qtconsole, jupyter-console, prometheus-client, terminado, Send2Trash, notebook, widgetsnbextension, ipywidgets, jupyter, coverage, pytest-cov, nbval, pylint-plugin-utils, pylint-flask
+Successfully installed Click-7.0 Flask-1.1.2 Jinja2-2.10.3 MarkupSafe-1.1.1 Send2Trash-1.5.0 Werkzeug-0.16.0 astroid-2.4.1 attrs-19.3.0 backcall-0.1.0 bleach-3.1.5 coverage-5.1 decorator-4.4.2 defusedxml-0.6.0 entrypoints-0.3 importlib-metadata-1.6.1 ipykernel-5.3.0 ipython-7.15.0 ipython-genutils-0.2.0 ipywidgets-7.5.1 isort-4.3.21 itsdangerous-1.1.0 jedi-0.17.0 jsonschema-3.2.0 jupyter-1.0.0 jupyter-client-6.1.3 jupyter-console-6.1.0 jupyter-core-4.6.3 lazy-object-proxy-1.4.3 mccabe-0.6.1 mistune-0.8.4 more-itertools-8.3.0 nbconvert-5.6.1 nbformat-5.0.6 nbval-0.9.5 notebook-6.0.3 numpy-1.18.5 packaging-20.4 pandas-0.24.2 pandocfilters-1.4.2 parso-0.7.0 pexpect-4.8.0 pickleshare-0.7.5 pluggy-0.13.1 prometheus-client-0.8.0 prompt-toolkit-3.0.5 ptyprocess-0.6.0 py-1.8.1 pygments-2.6.1 pylint-2.5.2 pylint-flask-0.6 pylint-plugin-utils-0.6 pyparsing-2.4.7 pyrsistent-0.16.0 pytest-5.4.3 pytest-cov-2.9.0 python-dateutil-2.8.0 pytz-2019.3 pyzmq-19.0.1 qtconsole-4.7.4 qtpy-1.9.0 scikit-learn-0.20.2 scipy-1.3.1 six-1.12.0 terminado-0.8.3 testpath-0.4.4 toml-0.10.1 tornado-6.0.4 traitlets-4.3.3 typed-ast-1.4.1 wcwidth-0.2.3 webencodings-0.5.1 widgetsnbextension-3.5.1 wrapt-1.12.1 zipp-3.1.0
+Removing intermediate container 31b86046b99f
+---> dfd35b638281
+Step 6/7 : EXPOSE 80
+---> Running in d872979ee629
+Removing intermediate container d872979ee629
+---> 15b7058849bb
+Step 7/7 : CMD ["python", "web.py"]
+---> Running in 3f8fb42eb55a
+Removing intermediate container 3f8fb42eb55a
+---> 14e615b713dc
+Successfully built 14e615b713dc
+Successfully tagged nouranelkassas/demolocal:latest
+Pushing index.docker.io/nouranelkassas/demolocal:latest...
+Done!
+Build finished
+
