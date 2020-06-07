@@ -12,7 +12,7 @@ dockerpath=demolocal
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login --username demolocal
-docker tag udacitypinzonimage nouranelkassas/demolocal:v1pro3
+docker tag udacitypinzonimage nouranelkassas/demolocal:latest
 # Step 3:
 # Push image to a docker repository
-docker push nouranelkassas/demolocal:v1pro3
+docker push nouranelkassas/demolocal:latest
