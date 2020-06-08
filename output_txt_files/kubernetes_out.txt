@@ -1,7 +1,4 @@
-Port: 8000
-{
-  "prediction": [
-    20.35373177134412
-  ]
-}
+NAME                        READY     STATUS      RESTARTS   AGE
+demolocal-31b7a263b-4g3e5   1/1       Running     0          3m
+
 
