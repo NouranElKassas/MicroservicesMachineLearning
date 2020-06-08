@@ -32,7 +32,9 @@ validate-csv:
 
 start-api:
 	#sets PYTHONPATH to directory above, would do differently in production
-	cd flask_app && PYTHONPATH=".." python web.py
+	#cd flask_app && 
+	#PYTHONPATH=".." 
+	python app.py
 
 benchmark-web-sum:
 	#very simple benchmark of api on sum operations
